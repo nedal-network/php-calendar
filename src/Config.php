@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace benhall14\phpCalendar;
+namespace NedalNetwork\phpCalendar;
 
 class Config
 {

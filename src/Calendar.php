@@ -2,23 +2,18 @@
 
 declare(strict_types=1);
 
-namespace benhall14\phpCalendar;
+namespace NedalNetwork\phpCalendar;
 
 use BadMethodCallException;
 use DateTimeInterface;
-use benhall14\phpCalendar\Views\Month;
-use benhall14\phpCalendar\Views\Week;
+use NedalNetwork\phpCalendar\Views\Month;
+use NedalNetwork\phpCalendar\Views\Week;
 use Carbon\Carbon;
 
 /**
  * Simple PHP Calendar Class.
  *
- * @copyright  Copyright (c) Benjamin Hall
- * @license https://github.com/benhall14/php-calendar
- *
- * @version 1.2
- *
- * @author Benjamin Hall <https://conobe.co.uk>
+ * @license https://github.com/NedalNetwork/php-calendar
  *
  * @method $this hideSundays()
  * @method $this hideMondays()

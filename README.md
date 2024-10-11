@@ -8,13 +8,13 @@ This is fully compatible with *PHP 5 through to **PHP 8.1+***
 # Installation via Composer
 You can now install this class via composer.
 
-	$ composer require benhall14/php-calendar
+	$ composer require nedal-network/php-calendar
 	
 **Remember** to add the composer autoloader before using the class and use the correct namespace.
 
 	require 'vendor/autoload.php';
 
-	use benhall14\phpCalendar\Calendar as Calendar;
+	use NedalNetwork\phpCalendar\Calendar as Calendar;
 
 # Usage
 Please make sure you have added the required classes.
@@ -256,20 +256,3 @@ We now ship with both **English** and **Spanish** translations, with more coming
 ````
 
 If you want to help with translations, use the code in the **useSpanish()** method as a guide, and open a pull-request.
-
-# Requirements
-
-**Fully tested to work with PHP 5.3, 5.5, 5.6, 7.0, 7.1, 7.2, 7.3 and 8.1**
-
-**PHP DateTime**
-
-# License
-Copyright (c) 2016-2022 Benjamin Hall, ben@conobe.co.uk 
-https://conobe.co.uk
-
-Licensed under the MIT license
-
-# Donate?
-If you find this project helpful or useful in any way, please consider getting me a cup of coffee - It's really appreciated :)
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/benhall14)

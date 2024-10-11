@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace benhall14\phpCalendar;
+namespace NedalNetwork\phpCalendar;
 
 use Carbon\Carbon;
 
+/** @package NedalNetwork\phpCalendar */
 class Event
 {
     public string $box_classes;

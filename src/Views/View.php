@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace benhall14\phpCalendar\Views;
+namespace NedalNetwork\phpCalendar\Views;
 
 use DateTimeInterface;
-use benhall14\phpCalendar\Calendar;
-use benhall14\phpCalendar\Config;
-use benhall14\phpCalendar\Event;
+use NedalNetwork\phpCalendar\Calendar;
+use NedalNetwork\phpCalendar\Config;
+use NedalNetwork\phpCalendar\Event;
 use Carbon\CarbonInterface;
 
 abstract class View
