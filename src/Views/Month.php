@@ -38,15 +38,15 @@ class Month extends View
 
         $total_days_in_month = $startDate->daysInMonth();
 
-        $calendar .= sprintf('<table class="calendar  %s %s ">', $color, $this->config->table_classes);
+        $calendar .= sprintf('<table class="calendar  %s %s " celspacing="0" celpadding="0">', $color, $this->config->table_classes);
 
         $calendar .= '<thead>';
 
-        $calendar .= '<tr class="calendar-title">';
+        $calendar .= '<tr class="tr-calendar-title">';
 
-        $calendar .= '<th colspan="'.$colspan.'">';
+        $calendar .= '<th class="th-calendar-title" colspan="'.$colspan.'">';
 
-        $calendar .= ucfirst($startDate->locale($this->config->locale)->monthName).' '.$startDate->year;
+        $calendar .= $startDate->year.' '.mb_ucfirst($startDate->locale($this->config->locale)->monthName);
 
         $calendar .= '</th>';
 
@@ -56,7 +56,7 @@ class Month extends View
         $carbonPeriod = Carbon::now()->locale($this->config->locale)->startOfWeek($this->config->starting_day)->toPeriod(7);
 
         foreach ($carbonPeriod->toArray() as $day) {
-            $calendar .= '<th class="cal-th cal-th-'.strtolower($day->englishDayOfWeek).'">'.ucfirst('full' === $this->config->day_format ? $day->dayName : mb_str_split($day->minDayName)[0]).'</th>';
+            $calendar .= '<th class="cal-th cal-th-'.strtolower($day->englishDayOfWeek).'">'.ucfirst('full' === $this->config->day_format ? $day->dayName : $day->minDayName).'</th>';
         }
 
         $calendar .= '</tr>';
@@ -124,7 +124,7 @@ class Month extends View
                 $calendar .= '</tr>';
 
                 // start a new calendar row if there are still days left in the month
-                if (($running_day_count + 1) <= $total_days_in_month) {
+                if (($running_day_count) <= $total_days_in_month) {
                     ++$week;
                     $calendar .= '<tr class="cal-week-'.$week.'">';
                 }
